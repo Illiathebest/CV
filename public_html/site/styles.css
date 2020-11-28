@@ -1,386 +1,442 @@
-/*
-Design by Metamorphosis Design
-http://www.metamorphozis.com
-Released for free under a Creative Commons Attribution 2.5 License
-*/
-
-*{
-    margin: 0px;
-    padding: 0px;
+*, *:after, *:before {
+box-sizing: border-box;
+padding: 0;
+margin: 0;
+transition: .5s ease-in-out; /* добавим плавность переходов для всех элементов страницы*/
 }
-
-img, fieldset{
-    padding: 0px;
-    border: none;
-	margin: 0px;
-	line-height: 0px;
+ul {
+list-style: none;
 }
-
-a{
-    color: #ffffff;
-    text-decoration: none;
-	font-weight: bold;
+a {
+text-decoration: none;
+outline: none;
 }
-
-a:hover {
-    text-decoration: none;
-    color: #00ebc7;
+img {
+display: block;
+width: 100%;
 }
-
-h3{
-	font: 18px Arial, Helvetica, sans-serif;
-	color: #ffffff;
-	font-weight: normal;
-	text-align: center;
-	padding-bottom: 5px;	
+h1, h2, h3, h4, h5, h6 {
+font-family: 'Playfair Display';
+font-weight: normal;
+letter-spacing: 1px;
 }
-
-h2{
-	font: 14px Arial, Helvetica, sans-serif;
-	font-weight: bold;
-	color: #00ebc7;
-	padding-bottom: 15px;
+body {
+font-family: 'Open Sans', arial, sans-serif;
+font-size: 14px;
+line-height: 1;
+color: #373737;
+background: #f7f7f7;
 }
-
-body{	
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 12px;
-    line-height: 17px;
-    color: #ffffff;
-    background: #0a6a5b url(images/bg.jpg);
+/* добавим очистку потока для всех контейнеров, внутри которых задано обтекание дочерних элементов */
+header:after, .container:after, footer:after, .widget-posts-list li:after, #subscribe:after {
+content: "";
+display: table;
+clear: both;
+} 
+/* стилевой класс, который управляет шириной контейнера сетки*/
+.container {
+margin: 0 auto;
+width: 100%;
+max-width: 960px;
+padding: 0 15px;
+} 
+header {
+width: 100%;
+background: white;
+box-shadow: 3px 3px 1px rgba(0,0,0,.05);
+padding: 15px 0;
+margin-bottom: 30px;
+position: relative;
 }
-
-.clear{
-	clear: both;	
+/* логотип */
+.logo {
+display: block; 
+float: left;
 }
-
-#bg_black{
-	background: url(images/bg_black.png) repeat-x top;	
+.logo span {
+color: white;
+display: inline-block;
+width: 30px;
+height: 30px;
+line-height: 30px;
+border-radius: 50%;
+margin: 5px 0;
+text-align: center;
+text-shadow: 2px 2px 1px rgba(0,0,0,.4);
 }
-
-/*
-	wrap
-*/
-
-#wrap{
-	border: 22px solid #ffffff;
-	width: 1032px;
-	margin: 0 auto;
-	background: #ffffff;
+.logo span:nth-child(odd) {
+background: #EF5A42;
 }
-
-/*
-	header
-*/
-#header{
-	background: url(images/header.jpg) no-repeat top left;
-	width: 1032px;
-	height: 317px;
+.logo span:nth-child(even) {
+background: #F8B763;
 }
-/*
-	menu
-*/
-
-#menu{
-	background: url(images/menu_bg.jpg) repeat-x top;
-	height: 83px;
+/* меню */
+#menu {
+float: right;
 }
-
-#menu ul{
-	padding-left: 0px;
-    list-style: none;
-	width: 800px;
-	margin: 0 auto;
+#menu li {
+display: inline-block;
+margin-right: 30px;
 }
-
-#menu ul li{
-	display: inline;
+#menu a {
+color: #111;
+text-transform: uppercase;
+letter-spacing: 1px;
+font-weight: 600;
+display: block;
+line-height: 40px;
 }
-
-#menu ul li a{
-	font: 24px  Arial, Helvetica, sans-serif;
-    color: #ffffff;
-	text-align: center;
-    font-weight: normal;
-    text-decoration: none;
-    display: block;
-    float: left;
-    width: 160px;
-    height: 83px;
-	line-height: 83px;
+#menu a:hover {
+color: #EF5A42;
 }
-
-#menu ul li a:hover,  #menu ul li .active{
-	color: #ffffff;
-	background: url(images/hover.png) no-repeat center;
+#menu li:last-child  {
+margin-right: 0;
 }
-
-
-/*logo*/
-
-#logo{
-	width: 1032px;
-	margin: 0 auto;
-	height: 52px;
-	padding-top: 30px;
-	padding-left: 30px;
+/* форма поиска */
+#searchform {
+float: right;
+margin-left: 46px;
+display: inline-block;
+position: relative;
 }
-
-#logo h1 a{
-	font: 14px Arial, Helvetica, sans-serif;
-	color: #ffffff;
-	font-weight: bold;
-	text-decoration: none;
+#searchform input {
+width: 170px;
+float: left;
+border: none;
+padding-left: 10px;
+height: 40px;
+overflow: hidden;
+outline: none;
+color: #9E9C9C;
+font-style: italic;
 }
-.v{
-	position:relative;
-	float:left;
-	}
-.vlinks{
-	position:relative;
-	float:right;}
-
-#logo a small{
-	font: 12px Arial, Helvetica, sans-serif;
-	color: #ffffff;
-	font-weight: normal;
-	text-decoration: none;
+#searchform button {
+background: transparent;
+height: 40px;
+border: none;
+position: absolute;
+right: 10px;
+color: #EF5A42;
+cursor: pointer;
+font-size: 18px;
 }
-
-/*
-	3 column box top
-*/
-
-#column_box{
-	padding: 24px 32px 0px 32px;
+#searchform input:focus {
+outline: 2px solid #EBEBE3;
 }
-
-#column1, #column2, #column3{
-	width: 260px;
-	float: left;
-	background: url(images/bg_col_top.jpg) no-repeat top left;
-	height: 168px;
-	padding: 32px 20px 14px 20px;
+/* кнопка переключения меню, появляющаяся при ширине 768px */
+.nav-toggle {
+display: none;
+position: relative;
+float: right;
+width: 40px;
+height: 40px;
+margin-left: 20px;
+background: #EF5A42;
+cursor: pointer;
 }
-
-#column2{
-	margin: 0px 31px 0px 35px;
+.nav-toggle span {
+display: block;
+position: absolute;
+top: 19px;
+left: 8px;
+right: 8px;
+height: 2px;
+background: white;
 }
-
-#column_box .read{
-	background: url(images/read.jpg) no-repeat top left;
-	width: 128px;
-	height: 34px;
-	display: block;
-	text-align: center;
-	font: 18px Arial, Helvetica, sans-serif;
-	color: #ffffff;
-	line-height: 34px;
-	font-weight: normal;
-	margin-top: 15px;
+.nav-toggle span:before, .nav-toggle span:after {
+content: "";
+position: absolute;
+display: block;
+left: 0;
+width: 100%;
+height: 2px;
+background: white;
 }
-
-/*
-	last box
-*/
-
-#last_box{
-	background: url(images/last_box.jpg) no-repeat left top;
-	height: 103px;
-	margin-top: 10px;
+.nav-toggle span:before {
+top: -10px;
 }
-
-#last_box p{
-	padding: 17px 25px 10px 25px;
+.nav-toggle span:after {
+bottom: -10px;
 }
-
-#last_box p a{
-	font-weight: bold;
+/* класс, который будет добавлен в верхнему меню при нажатии на кнопку и покажет скрытое меню*/
+#menu.active {
+max-height: 123px;
 }
-
-/*
-	footer_top
-*/
-
-#footer_top_top{
-	background: url(images/footer_top_top.jpg) no-repeat top left;
-	height: 24px;
-	margin-top: 17px;
+/* левый контейнер */
+.posts-list {
+margin-bottom: 30px;
+width: 64%;
+float: left;
 }
-
-#footer_top_bot{
-	background: url(images/footer_top_bot.jpg) no-repeat top left;
-	height: 27px;
+/* блок для статьи */
+.post {
+margin-bottom: 35px;
 }
-
-#footer_repeat{
-	background: #171c20 url(images/footer_top_repeat.jpg) repeat-x top;
-	min-height: 249px;	
+.post-content p {
+line-height: 1.5;
+padding-bottom: 1em;
 }
-
-#footer_top{
-	width: 841px;
-	margin: 0 auto;
-	padding-top: 18px;
-	background: url(images/footer_top_border.png) no-repeat bottom left;
+.post-image {
+margin-bottom: 30px;
 }
-
-#footer_top a{
-	color: #ffffff;
-	font-weight: bold;
+.category {
+margin-bottom: 15px;
 }
-
-#footer_top a:hover{
-	color: #38bda2;
+.category a {
+color: #F8B763;
+text-transform: uppercase;
 }
-
-#footer_top p{
-	color: #ffffff;
-	line-height: 20px;
+.post-title {
+margin-bottom: 12px;
+font-size: 26px;
 }
-
-#footer_column1, #footer_column2, #footer_column3{
-	width: 226px;
-	float: left;
+/* блок с кнопкой "продолжить чтение" и кнопками социальных сетей */
+.post-footer {
+border-top: 1px solid #EBEBE3;
+border-bottom: 1px solid #EBEBE3;
+position: relative;
+margin-top: 15px;
 }
-
-.footer_text{
-	background: url(images/footer_top_border.png) no-repeat top left;
-	width: 226px;
-	padding: 10px 0px 10px 0px;
+.more-link {
+position: relative;
+display: inline-block;
+font-size: 10px;
+text-transform: uppercase;
+color: white;
+line-height: 44px;
+padding: 0 22px;
+background: #3C3D41;
+letter-spacing: 0.1em;
+white-space: nowrap;
 }
-
-#footer_column2{
-	padding: 0px 87px 0px 75px;
+.more-link:after {
+content: '';
+display: block;
+position: absolute;
+width: 0;
+height: 0;
+top: 0;
+right: 0;
+border: solid transparent;
+border-width: 22px 18px;
+border-left-color: #3C3D41;
+transform: translateX(100%);
 }
-
-.foot_pad{
-    padding-left: 45px;
-	padding-top: 10px;
+.post-social {
+position: absolute;
+left: auto;
+top: 50%;
+right: 0;
+text-align: right;
+transform: translateY(-50%);
+padding: 0;
+font-size: 12px;
 }
-
-.link1{
-    background: url(images/link1.png) no-repeat 0px 2px;
-    padding-left: 30px;
-    min-height: 18px;
-    padding-bottom: 10px;
+.post-social a {
+display: inline-block;
+margin-left: 8px;
+color: #F8B763;
+width: 25px;
+height: 25px;
+line-height: 23px;
+text-align: center;
+border-radius: 50%;
+border: 1px solid;
 }
-
-.link2{
-    background: url(images/link2.png) no-repeat 0px 2px;
-    padding-left: 30px;
-    min-height: 18px;
-    padding-bottom: 10px;
+/* правый контейнер */
+aside {
+width: 33%;
+float: right;
 }
-
-.link3{
-    background: url(images/link3.png) no-repeat 0px 2px;
-    padding-left: 30px;
-    min-height: 18px;
-    padding-bottom: 10px;
+/* блок для виджетов */
+.widget {
+padding: 20px 15px;
+background: white;
+font-size: 13px;
+margin-bottom: 30px;
+box-shadow: 3px 3px 1px rgba(0,0,0,.05);
 }
-
-.link4{
-    background: url(images/link4.png) no-repeat 0px 2px;
-    padding-left: 30px;
-    min-height: 18px;
-    padding-bottom: 10px;
+.widget-title {
+font-size: 18px;
+padding: 10px;
+margin-bottom: 20px;
+text-align: center;
+border: 2px solid #F8B763;
+box-shadow: 3px 3px 0 0 #F8B763;
 }
-
-.ls{
-    list-style: none;
-    padding-left: 0px;
+.widget-category-list li {
+border-bottom: 1px solid #EBEBE3;
+padding: 10px 0;
+color: #c6c6c6;
+font-style: italic;
 }
-
-.ls li{
-    background: url(images/ls1.gif) no-repeat 0px 6px;
-    margin-bottom: 8px;
-    padding-left: 15px;
+.widget-category-list li:last-child {
+border-bottom: none;
 }
-
-/*
-	footer_bot
-*/
-
-#footer_bot{
-	padding: 25px;
-	text-align: center;
+.widget-category-list li a {
+color: #626262;
+margin-right: 6px;
+font-style: normal;
 }
-
-
-/*=================================*/
-/* Nivo Slider Demo
-/* November 2010
-/* By: Gilbert Pellegrom
-/* http://dev7studios.com
-/*=================================*/
-
-
-#slider-wrapper {
-    background:url(images/top.jpg) no-repeat;
-    width: 1032px;
-    height: 317px;
-    margin:0 auto;
+.widget-category-list li a:before {
+content: "\f105";
+display: inline-block;
+font-family: 'FontAwesome';
+margin-right: 10px;
+color: #c6c6c6;
 }
-
-#slider {
-	position:relative;
-    width: 1032px;
-    height: 317px;
-	background:url(images/loading.gif) no-repeat 50% 50%;
+.widget-posts-list li {
+border-top: 1px solid #EBEBE3;
+padding: 15px 0;
 }
-#slider img {
-	position:absolute;
-	top:0px;
-	left:0px;
-	display:none;
+.widget-posts-list li:nth-child(1) {
+border-top: none;
 }
-#slider a {
-	border:0;
-	display:block;
+.post-image-small {
+width: 30%;
+float: left;
+margin-right: 15px;
 }
-
-.nivo-controlNav {
-	position:absolute;
-	left:260px;
-	bottom:-42px;
-	display: none;
+.widget-post-title {
+float: left;
 }
-.nivo-controlNav a {
-	display:block;
-	width:22px;
-	height:22px;
-	background:url(images/bullets.png) no-repeat;
-	text-indent:-9999px;
-	border:0;
-	margin-right:3px;
-	float:left;
+/* форма подписки */
+#subscribe {
+position: relative;
+width: 100%;
+padding: 15px 0;
 }
-.nivo-controlNav a.active {
-	background-position:0 -22px;
+#subscribe input {
+width: 100%;
+display: block;
+float: left;
+border: 2px solid #EBEBE3;
+padding: 0 0 0 10px;
+height: 40px;
+position: relative;
+outline: none;
+color: #9E9C9C;
+font-style: italic;
 }
-
-.nivo-directionNav a {
-	display:block;
-	width:30px;
-	height:30px;
-	background:url(images/arrows.png) no-repeat;
-	text-indent:-9999px;
-	border:0;
+#subscribe button {
+padding: 0 15px;
+background: transparent;
+height: 40px;
+border: none;
+position: absolute;
+right: 0;
+color: #EF5A42;
+cursor: pointer;
+font-size: 18px;
 }
-a.nivo-nextNav {
-	background-position:-30px 0;
-	right:15px;
+#subscribe input:focus + button {
+background: #EF5A42;
+color: white;
 }
-a.nivo-prevNav {
-	left:15px;
+footer {
+padding: 30px 0;
+background: #3C3D41;
+color: white;
 }
-
-.nivo-caption {
-    text-shadow:none;
-    font-family: Helvetica, Arial, sans-serif;
+.footer-col {
+width: 33.3333333333%;
+float: left;
 }
-.nivo-caption a { 
-    color:#efe9d1;
-    text-decoration:underline;
+.footer-col a {
+color: white;
+}
+.footer-col:last-child {
+text-align: right;
+}
+.social-bar-wrap {
+text-align: center;
+}
+.social-bar-wrap a {
+padding: 0 7px;
+font-size: 18px;
+}
+@media (max-width: 768px) {
+/* показываем кнопку для переключения верхней навигации */
+.nav-toggle {
+display: block;
+}
+header {
+padding: 10px 0;
+}
+/* скрываем верхнее меню, отменяем обтекание, позиционируем его, сместив на высоту шапки сайта */ 
+#menu {
+max-height: 0;
+background: white;
+float: none;
+position: absolute;
+overflow: hidden;
+top: 63px;
+right: 0;
+left: 0;
+margin: 0;
+padding: 0;
+z-index: 3;
+}
+/* делаем элементы списка блочными, чтобы они располагались друг под другом */
+#menu li {
+display: block;
+text-align: center;
+border-bottom: 1px solid #EBEBE3;
+margin-right: 0;
+}
+/* отменяем обтекание левой и правой колонок, устанавливаем им ширину 100%*/
+.posts-list, aside {
+width: 100%;
+float: none;
+}
+.widget-post-title {
+font-size: 1.5em;
+}
+}
+@media (max-width: 480px) {
+/* отменяем обтекание для логотипа и выравниваем по центру*/
+.logo {
+float: none;
+margin: 0 auto 15px;
+display: table;
+}
+.logo span {
+margin: 0 2px;
+}
+/* позиционируем меню на увеличившуюся высоту шапки */
+#menu {
+top: 118px;
+}
+/* позиционируем форму поиска по левому краю */
+#searchform {
+float: left;
+margin-left: 0;
+}
+/* убираем верхнюю и нижнюю границы и выравниваем кнопку по центру */
+.post-footer {
+border-top: none;
+border-bottom: none;
+text-align: center;
+}
+/* отменяем позиционирование кнопок соцсетей */
+.post-social {
+position: static;
+text-align: center;
+transform: none;
+margin-top: 20px;
+}
+.widget-post-title {
+font-size: 1.2em;
+}
+/* отменяем обтекание для столбцов подвала страницы */
+.footer-col {
+float: none;
+margin-bottom: 20px;
+width: 100%;
+text-align: center;
+}
+.footer-col:last-child {
+text-align: center;
+margin-bottom: 0;
+}
 }

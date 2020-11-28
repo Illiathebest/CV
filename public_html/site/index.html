@@ -1,130 +1,119 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-
+<!DOCTYPE html>
+<html>
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <title>MyFreeCssTemplates.com free CSS template</title>
-    <meta name="keywords" content="" />
-    <meta name="description" content="" />
-    <link href="styles.css" rel="stylesheet" type="text/css" media="screen" />
-    <link rel="stylesheet" href="nivo-slider.css" type="text/css" media="screen" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Адаптивная вёрстка сайта</title>
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic|Playfair+Display:400,700&subset=latin,cyrillic">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css">
+  <link href="styles.css" rel="stylesheet" type="text/css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 </head>
-
 <body>
-    <div id="bg_black">
-        <div id="logo">
-            <h1><a href="#">freecss_greengrey</a></h1>
-            <a href="#"><small>Small Company Slogan Goes Here</small></a>
+<header>
+    <nav class="container">
+      <a class="logo" href="">
+        <span>L</span>
+        <span>O</span>
+        <span>G</span>
+        <span>O</span>
+      </a>
+      <div class="nav-toggle"><span></span></div>
+      <form action="" method="get" id="searchform">
+        <input type="text" placeholder="Искать на сайте...">
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
+      <ul id="menu">
+        <li><a href="">Блог</a></li>
+        <li><a href="">Портфолио</a></li>
+        <li><a href="">Об авторе</a></li>
+      </ul>
+    </nav>
+  </header>
+    <div class="container">
+  <div class="posts-list">
+    <article id="post-1" class="post">
+      <div class="post-image"><a href=""><img src="https://html5book.ru/wp-content/uploads/2016/05/rasskaz_slovar_rodnoy_prirodi.jpg"></a></div>
+      <div class="post-content">
+        <div class="category"><a href="">Дизайн</a></div>
+        <h2 class="post-title">Весна</h2>
+        <p>Очень богат русский язык словами, относящимися к временам года и к природным явлениям, с ними связанным.</p>
+        <div class="post-footer">
+          <a class="more-link" href="">Продолжить чтение</a>
+          <div class="post-social">
+            <a href="" target="_blank"><i class="fa fa-facebook"></i></a>
+            <a href="" target="_blank"><i class="fa fa-twitter"></i></a>
+            <a href="" target="_blank"><i class="fa fa-pinterest"></i></a>
+          </div>
         </div>
-        <div id="wrap">
-            <div id="header">
-
-
-                <div id="wrapper">
-                    <div id="slider-wrapper">
-                        <div id="slider" class="nivoSlider">
-                            <img src="images/header.jpg" alt="" />
-                            <img src="images/header2.jpg" alt="" />
-                            <img src="images/header3.jpg" alt="" />
-                            <img src="images/header4.jpg" alt="" />
-                        </div>
-                    </div>
-                </div>
-
-                <script type="text/javascript" src="lib/jquery-1.4.3.min.js"></script>
-                <script type="text/javascript" src="lib/jquery.nivo.slider.pack.js"></script>
-                <script type="text/javascript">
-                    $(window).load(function() {
-                        $('#slider').nivoSlider();
-                    });
-                </script>
-
-            </div>
-            <div id="menu">
-                <ul>
-                    <li><a href="#" class="active">Home</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Gallery</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                </ul>
-                <div class="clear"></div>
-            </div>
-            <div id="column_box">
-                <div id="column1">
-                    <h2>Fusce semper feugiat elit, vitae</h2>
-                    <p><a href="#">Vestibulum semper venenatis enim at.</a> <br /> Proin hendrerit gravida interdum. Morbi molestie erat sit amet risus euismod vehicula. Pellen massa nisi. Ut sapien enim, sollicitu</p>
-                    <a href="#" class="read">read more</a>
-                </div>
-                <div id="column2">
-                    <h2>Nunc odio metus, convallis at </h2>
-                    <p><a href="#">Cras faucibus commodo nisi, non dapibus</a> est facilisis vitae. Suspendisse sed lorem ut neque iaculis pellentesque vitae feugiat magna. Integer lorem tellus, euismod sed convallis eu, </p>
-                    <a href="#" class="read">read more</a>
-                </div>
-                <div id="column3">
-                    <h2>Suspendisse mi erat ullamcorper</h2>
-                    <p><a href="#">Aliquam libero quam, tincidunt eget porttitor et, auctor sit amet dolor.</a><br /> Nulla vestibulum elit eu justo laoreet posuere. Cras elementum tempor adipiscing. Cras </p>
-                    <a href="#" class="read">read more</a>
-                </div>
-                <div class="clear"></div>
-            </div>
-            <div id="last_box">
-                <p><a href="#">Cras faucibus commodo nisi, non dapibus est facilisis vitae.</a><br /> Suspendisse sed lorem ut neque iaculis pellentesque vitae feugiat magna. Integer lorem tellus, euismod sed convallis eu, pretium sit amet massa. Nulla eros
-                    lacus, tristique sed laoreet vitae, cursus facilisis odio. Aliquam libero quam, tincidunt eget porttitor et, auctor sit amet dolor. Nulla vestibulum elit eu justo laoreet posuere. Cras elementum tempor adipiscing. Cras vehicula luctus
-                    turpis, eu aliquam neque placerat ut. Maecenas non risus mi, eu gravida felis. Pellentesque mollis lobortis tincidunt.</p>
-            </div>
-            <div id="footer_top_top"></div>
-            <div id="footer_repeat">
-                <div id="footer_top">
-                    <div id="footer_column1">
-                        <h3>Recent posts</h3>
-                        <div class="footer_text">
-                            <p><a href="#">Suspendisse rutrum interdum lacinia.</a> Suspendisse tempus aliquet elit sit amet pellentesque. Donec iaculis pulvinar mauris, ac vulputate justo pretium quis. </p>
-                            <br />
-                            <p><a href="#">Quisque luctus, mi ornare malesuada</a> Suspendisse tempus aliquet elit sit amet pellentesque. Donec iaculis pulvinar </p>
-                        </div>
-                    </div>
-                    <div id="footer_column2">
-                        <h3>Share with Others</h3>
-                        <div class="footer_text">
-                            <div class="foot_pad">
-                                <div class="link1"><a href="#">Subscribe to Blog</a></div>
-                                <div class="link2"><a href="#">Be a fan on Facebook</a></div>
-                                <div class="link3"><a href="#">RSS Feed</a></div>
-                                <div class="link4"><a href="#">Follow us on Twitter</a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="footer_column3">
-                        <h3>Useful Resources</h3>
-                        <div class="footer_text">
-                            <div class="foot_pad">
-                                <ul class="ls">
-                                    <li><a href="#">Lorem ipsum dolor</a></li>
-                                    <li><a href="#">Maecenas in turpis </a></li>
-                                    <li><a href="#">Morbi fringilla libero</a></li>
-                                    <li><a href="#">In venenatis metus vel </a></li>
-                                    <li><a href="#">Donec cursus quam ac </a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-            </div>
-            <div id="footer_top_bot"></div>
+      </div>
+    </article>
+    <article id="post-2" class="post">
+      ...
+    </article>
+  </div> <!-- конец div class="posts-list"-->
+  <aside>
+  <div class="widget">
+    <h3 class="widget-title">Категории</h3>
+    <ul class="widget-category-list">
+      <li><a href="">Дизайн</a> (2)</li>
+      <li><a href="">Вёрстка</a> (5)</li>
+      <li><a href="">Видео</a> (1)</li>
+    </ul>
+  </div>
+  <div class="widget">
+    <h3 class="widget-title">Последние записи</h3>
+    <ul class="widget-posts-list">
+      <li>
+        <div class="post-image-small">
+          <a href=""><img src="https://html5book.ru/wp-content/uploads/2016/05/rasskaz_slovar_rodnoy_prirodi.jpg"></a>
         </div>
-        <div id="footer_bot">
-            <div class="v">Copyright 2011. Designed by <a href="http://www.myfreecsstemplates.com/">My Free css templates</a></div>
-            <div class="vlinks">Provided by <a href="http://www.websitetemplates.org">Website Templates</a>
-            </div>
-
-            <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a> | <a href="http://validator.w3.org/check/referer" title="This page validates as XHTML 1.0 Transitional"><abbr title="eXtensible HyperText Markup Language">XHTML</abbr></a> |
-                <a
-                    href="http://jigsaw.w3.org/css-validator/check/referer" title="This page validates as CSS"><abbr title="Cascading Style Sheets">CSS</abbr></a>
-            </p>
+        <h4 class="widget-post-title">Весна</h4>
+      </li>
+      <li>
+        <div class="post-image-small">
+          <a href=""><img src="https://html5book.ru/wp-content/uploads/2016/05/rasskaz_Russia.jpg"></a>
         </div>
+        <h4 class="widget-post-title">Лето</h4>
+      </li>
+      <li>
+        <div class="post-image-small">
+          <a href=""><img src="https://html5book.ru/wp-content/uploads/2016/05/rasskaz_rodnaya_priroda_osen.jpg"></a>
+        </div>
+        <h4 class="widget-post-title">Осень</h4>
+      </li>
+    </ul>
+  </div>
+  <div class="widget">
+    <h3 class="widget-title">Подписка на рассылку</h3>
+    <form action="" method="post" id="subscribe">
+      <input type="email" name="email" placeholder="Ваш email" required>
+      <button type="submit"><i class="fa fa-paper-plane-o"></i></button>
+    </form>
+  </div>
+</aside>
+</div> <!-- конец div class="container"-->
+<footer>
+  <div class="container">
+    <div class="footer-col"><span>Мой блог © 2016</span></div>
+    <div class="footer-col">
+      <div class="social-bar-wrap">
+        <a title="Facebook" href="" target="_blank"><i class="fa fa-facebook"></i></a>
+        <a title="Twitter" href="" target="_blank"><i class="fa fa-twitter"></i></a>
+        <a title="Pinterest" href="" target="_blank"><i class="fa fa-pinterest"></i></a>
+        <a title="Instagram" href="" target="_blank"><i class="fa fa-instagram"></i></a>
+      </div>
     </div>
+    <div class="footer-col">
+      <a href="mailto:admin@yoursite.ru">Написать письмо</a>
+    </div>
+  </div>
+</footer>
+<script>
+$('.nav-toggle').on('click', function(){
+$('#menu').toggleClass('active');
+});
+</script>
 </body>
-
 </html>
